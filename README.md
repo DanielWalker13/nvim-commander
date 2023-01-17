@@ -1,4 +1,4 @@
-# Danny's Nvim Conf
+# Nvim-Commander
 
 # Pluggin list 
 

@@ -31,6 +31,8 @@
     }
 
 
+    vim.g.toggleterm_init_cmd = 'source ~/.zprofile'
+
     function _G.set_terminal_keymaps()
       local opts = {buffer = 0}
 

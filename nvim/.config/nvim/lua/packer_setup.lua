@@ -199,7 +199,9 @@ use({
   use  'vim-scripts/IndexedSearch';             -- Displays number of search matches in lower bar
   use  'tpope/vim-fugitive';                    -- Git - interation functionality
   use  'mbbill/undotree';                       -- Shows you undo revisions
-  use  'vim-scripts/YankRing.vim'               -- Yank history navigation - G2G - Had issue - resolved?
+  -- TODO: YankRing: Fix automatic mappings overwriting settings
+  -- Good plugin tho
+  -- use  'vim-scripts/YankRing.vim'               -- Yank history navigation - G2G - Had issue - resolved?
   use  'tpope/vim-surround';                    -- Surround - quick surrond of elements
   use  'godlygeek/tabular';                     -- Aligns text anywhwere in string with regex
   use    'axiaoxin/vim-json-line-format';       -- Pretty Json - Plugin to format <leader>wj

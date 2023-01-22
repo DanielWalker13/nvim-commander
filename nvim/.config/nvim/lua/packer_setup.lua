@@ -29,9 +29,14 @@ end
 
 local packer_bootstrap = ensure_packer()
 
+-- ----------------------------------------------------------------------------
+-- Relocate Packer Compiled File
+-- ----------------------------------------------------------------------------
+
+  vim.g.packer_compiled_path = '~/.packer_compiled.lua'
 
 -- ----------------------------------------------------------------------------
--- Packer Plugin Configuration
+-- Packer Plugin Start
 -- ----------------------------------------------------------------------------
 
 return require('packer').startup({function(use)
@@ -173,19 +178,21 @@ return require('packer').startup({function(use)
 
 -- GOOD:
 
-use({
-  "jackMort/ChatGPT.nvim",
-    config = function()
-      require("chatgpt").setup({
-        -- optional configuration
-      })
-    end,
-    requires = {
-      "MunifTanjim/nui.nvim",
-      "nvim-lua/plenary.nvim",
-      "nvim-telescope/telescope.nvim"
-    }
-})
+-- use({
+--   "jackMort/ChatGPT.nvim",
+--     config = function()
+--       require("chatgpt").setup({
+--         -- optional configuration
+--       })
+--     end,
+--     requires = {
+--       "MunifTanjim/nui.nvim",
+--       "nvim-lua/plenary.nvim",
+--       "nvim-telescope/telescope.nvim"
+--     }
+-- })
+
+
 
 -- ----------------------------------------------------------------------------
 -- Feature enhancements

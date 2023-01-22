@@ -75,7 +75,7 @@
 
 
   -- TODO: Fix this specific to my config setting
-  vim.g.python3_host_prog = '/usr/local/opt/python@3.10/bin/python3'
+  vim.g.python3_host_prog = '~/.asdf/shims/python'
 -- ============================================================================
 --  ColorScheme
 -- ============================================================================

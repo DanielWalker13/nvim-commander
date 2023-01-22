@@ -16,7 +16,7 @@
 
         -- TODO: Document Jedi settings
         -- Get this working without special setting
-    vim.g['jedi#environment_path'] = '/usr/local/opt/python@3.10/bin//python3'
+    vim.g['jedi#environment_path'] = '~/.asdf/shims/python'
     -- vim.g['jedi#environment_path'] = '/usr/local/bin/ipython'
 
 

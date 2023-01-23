@@ -212,7 +212,8 @@ return require('packer').startup({function(use)
   use  'tpope/vim-fugitive';                    -- Git - interation functionality
   use  'mbbill/undotree';                       -- Shows you undo revisions
 
-  -- TODO: YankRing: Fix automatic mappings overwriting settings
+  -- BUG: YankRing: Fix automatic mappings overwriting settings
+  -- Overrides mapping for Y = yg_ : Yank to end of line
   -- ChatGPT claims this plugin doesn't map anything, but that obviously isn't true
   -- Good plugin tho
   -- use  'vim-scripts/YankRing.vim'               -- Yank history navigation - G2G - Had issue - resolved?

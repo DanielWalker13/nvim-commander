@@ -1,7 +1,9 @@
 
 -- Automaticilly runs sync every time this file is saved
 
--- EVAL: Packer File A little annoying/ not useful if not intending to update yet.
+-- EVAL: Packer Auto-Sync Function: Packer A little annoying
+-- Could be useful once package is more stable
+-- not useful if dev is not intending to update yet.
 -- Should this config be retained?
   -- Mostly annoying because working on the file alot right now?
 
@@ -108,7 +110,8 @@ return require('packer').startup({function(use)
   -- Tab Bar
   use {'romgrk/barbar.nvim', wants = 'nvim-web-devicons'}   --Tab Bar
 
-  -- RESEARCH: Find best tab bar solution
+  -- RESEARCH: Plugin Tab Bar: Find best tab bar solution
+  -- Issue with showing all buffers that were opened not just what is currently open
   -- Evaluate barbar features
   -- What works best with color scheme swapping
 
@@ -118,7 +121,9 @@ return require('packer').startup({function(use)
   -- Lower Status Line
   -- EVAL: Galexyline Features
   -- Only the default config has been enabled
-  -- GOOD: Plugin is pretty legit so far -> StatusLine lacs desired info
+  -- GOOD: Plugin Galaxy Line: is pretty legit so far -> lacs desired info
+  -- Doens't have support for showing full number of lines in a file:
+    --  Than could be fixed with custom funciton, but is maybe more work
   -- Some issues with colorscheme
 
   use({
@@ -131,7 +136,7 @@ return require('packer').startup({function(use)
     requires = { "kyazdani42/nvim-web-devicons", opt = true }
   })
 
-  -- TODO: Find best status line solution
+  -- TODO: Plugin Status Line: Find best status line solution
   -- What works best with color scheem swapping
   -- https://github.com/nvim-lualine/lualine.nvim
   -- https://github.com/feline-nvim/feline.nvim
@@ -159,7 +164,7 @@ return require('packer').startup({function(use)
 -- Colorscheme
 -- ----------------------------------------------------------------------------
 
-  -- RESEARCH: Best ways to manage and swap color schemes
+  -- RESEARCH: Plugin ColorSchemes: Best ways to manage and swap color schemes
   use    'fisadev/fisa-vim-colorscheme';             -- Terminal Vim with 256 colors colorscheme
 
   -- 'tristen/superman'
@@ -173,10 +178,10 @@ return require('packer').startup({function(use)
 -- ChatCPT
 -- ----------------------------------------------------------------------------
 
--- EVAL: ChatGPT: There was more than one version of this plugin
+-- EVAL: Plugin ChatGPT: There was more than one version of this plugin
 -- Try out the others, but this one looks pretty good
 
--- GOOD:
+-- GOOD: Plugin ChatGPT: There are severa options to test
 
 -- use({
 --   "jackMort/ChatGPT.nvim",
@@ -206,7 +211,9 @@ return require('packer').startup({function(use)
   use  'vim-scripts/IndexedSearch';             -- Displays number of search matches in lower bar
   use  'tpope/vim-fugitive';                    -- Git - interation functionality
   use  'mbbill/undotree';                       -- Shows you undo revisions
+
   -- TODO: YankRing: Fix automatic mappings overwriting settings
+  -- ChatGPT claims this plugin doesn't map anything, but that obviously isn't true
   -- Good plugin tho
   -- use  'vim-scripts/YankRing.vim'               -- Yank history navigation - G2G - Had issue - resolved?
   use  'tpope/vim-surround';                    -- Surround - quick surrond of elements
@@ -217,7 +224,8 @@ return require('packer').startup({function(use)
   use    'ThePrimeagen/harpoon';                -- Marks per project - Workflow enhancement
   use  'ntpeters/vim-better-whitespace';        -- Trims whitespace automatically
 
-  -- TODO: Figure out indent line situation
+  -- TODO: Plugin Indent Lines: Plugins conflicts with Splash Page
+  -- Figure out indent line situation
   -- Works much better as a plugign but shows lines on splash screend
   -- use    'Yggdroot/indentLine';                      -- Adds visual lines before indents
   -- Doesn't show lines, but doesent' work nearly as well.
@@ -235,18 +243,18 @@ return require('packer').startup({function(use)
 -- Validate
 -- ----------------------------------------------------------------------------
 
-  -- use    'wellle/targets.vim';                   -- Additional motion targes - extends vim core
 
-  -- TODO: Readdress Auto close capabilities
+  -- ACTIVE:   Plugin Autopairs: Validate written in lua
+  -- Validate current configuration integrates with treesitter
   -- Closure matching plug wrtten in lua -> uses treesitter to assist prediction
   use 'windwp/nvim-autopairs';                 -- Automatically managges closures
 
-  -- RESEARCH: Find best snippet solution
-
-  -- TODO: Once autopairs proven remove these two
+  -- Alternitives
+  -- Autoclose will win if its in lua and integration with treesitter works well
   -- use    'Townk/vim-autoclose';                      -- Autoclose
-  -- Is this better than autoclose
   -- use 'jiangmiao/auto-pairs'                         -- Other version never tested
+
+  -- RESEARCH: Plugin Snippets: Find best snippet solution
   -- 'drmingdrmer/xptemplate'                           -- Autoclose and templates
   -- 'vim-scripts/AutoComplPop';                        -- Other version never tested
 
@@ -254,12 +262,16 @@ return require('packer').startup({function(use)
 -- Next man up
 -- ----------------------------------------------------------------------------
 
-
-  -- TODO:  Integrat this plugin
+  -- ACTIVE: Plugin Quick-Scope: Better jump Forward
+  -- Integrat this plugin
   -- Quick Ref for f, t / F, T navigation
       --https://github.com/unblevable/quick-scope
 
-  -- TODO: Needs good documentation and testing
+  -- ACTIVE: Plugin Targets: Better Surronding Motions
+  -- use    'wellle/targets.vim';                   -- Additional motion targes - extends vim core
+
+  -- EVAL: Plugin Indent Jumping: Good for JSON?
+  -- Needs good documentation and testing
   -- This could be good for JSON
   -- Not the highest priority
   -- use    'jeetsukumaran/vim-indentwise';     -- Indentation based movements
@@ -270,7 +282,7 @@ return require('packer').startup({function(use)
   -- EVAL: Code fromatter: Neoformat
   -- Uses prettier and other popular formatters to format code
 
-  -- RESEARCH: Potentioall plugin additions
+  -- EVAL: Next UP Plugins: Potentioall plugin additions
   -- use  'ThePrimeagen/git-worktree.nvim';       -- Marks per project - Workflow enhancement
   -- use  'neomake/neomake';                      -- Async build to run programs - Explore for Go - etc
   -- use  'christoomey/vim-quicklink';            -- Markdown - googles words and grabs links for documentation
@@ -281,12 +293,12 @@ return require('packer').startup({function(use)
 -- ----------------------------------------------------------------------------
 
   use 'davidhalter/jedi-vim';                  -- Python
-  -- TODO: Isort: Ensure configgured properly
+  -- TODO: Isort: Ensure configured properly
   use    'fisadev/vim-isort';                  -- Python - Automatically sort imports
   use 'psf/black'
 
 
-  -- TODO: Python / more debugging tools
+  -- EVAL: Python Plugin: / more debugging tools
 
   use {
     "puremourning/vimspector",

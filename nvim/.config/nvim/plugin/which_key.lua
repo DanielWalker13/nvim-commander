@@ -65,21 +65,18 @@ local mappings = {
     -- Specific dire can be references for todo context
     -- :TodoTrouble cwd=~/projects/foobar
 
-      l = {
-        name = 'List version',
-        f = {'<cmd>TodoLocList keywords=FIX,FIXME,BUG,FIXIT,ISSUE,TODO,UPGRADE,RESEARCH,OPTIM,PERFORMANCE,OPTIMIZE,DOCUMENT<cr>', 'Todo Fix Me Tags' },
-        i = {'<cmd>TodoLocList keywords=INFO, NOTE<cr>', 'Todo Info Tags' },
-        r = {'<cmd>TodoLocList keywords=RESEARCH,OPTION,GOOD,OK,BEST<cr>', 'Todo Research Tags' },
-        t = {'<cmd>TodoLocList keywords=TEST,TESTING,PASSED,FAILED<cr>', 'Todo Testing Tags' },
-      },
+      -- l = {
+      --   name = 'List version',
+      --   f = {'<cmd>TodoLocList keywords=FIX,FIXME,BUG,FIXIT,ISSUE,TODO,UPGRADE,RESEARCH,OPTIM,PERFORMANCE,OPTIMIZE,DOCUMENT<cr>', 'Todo Fix Me Tags' },
+      --   i = {'<cmd>TodoLocList keywords=INFO, NOTE<cr>', 'Todo Info Tags' },
+      --   r = {'<cmd>TodoLocList keywords=RESEARCH,OPTION,GOOD,OK,BEST<cr>', 'Todo Research Tags' },
+      --   t = {'<cmd>TodoLocList keywords=TEST,TESTING,PASSED,FAILED<cr>', 'Todo Testing Tags' },
+      -- },
 
-      t = {
-        name = 'Telescope version',
-        f = {'<cmd>TodoTelescope keywords=FIX,FIXME,BUG,FIXIT,ISSUE,TODO,UPGRADE,RESEARCH,OPTIM,PERFORMANCE,OPTIMIZE,DOCUMENT,TEST<cr>', 'Todo Fix Me Tags' },
-        i = {'<cmd>TodoTelescope keywords=INFO,NOTE<cr>', 'Todo Info Tags' },
-        r = {'<cmd>TodoTelescope keywords=RESEARCH,OPTION,GOOD,OK,BEST<cr>', 'Todo Research Tags' },
-        t = {'<cmd>TodoTelescope keywords=TEST,TESTING,PASSED,FAILED<cr>', 'Todo Testing Tags' },
-      },
+      f = {'<cmd>TodoTelescope keywords=FIX,FIXME,BUG,FIXIT,ISSUE,TODO,UPGRADE,RESEARCH,OPTIM,PERFORMANCE,OPTIMIZE,DOCUMENT,TEST<cr>', 'Todo Fix Me Tags' },
+      i = {'<cmd>TodoTelescope keywords=INFO,NOTE<cr>', 'Todo Info Tags' },
+      r = {'<cmd>TodoTelescope keywords=RESEARCH,OPTION,GOOD,OK,BEST<cr>', 'Todo Research Tags' },
+      t = {'<cmd>TodoTelescope keywords=TEST,TESTING,PASSED,FAILED<cr>', 'Todo Testing Tags' },
     }
 
 
@@ -218,7 +215,8 @@ local mappings = {
 -- vim.keymap.set('n', '<leader>xx',  ":w<CR>:terminal system('python1 "' . expand('%') . '"')<cr>")
 
 
--- TODO: Investigte if recreation of any of these Git vimscript functions is worth recreating
+-- TODO: Git: Investigte User Created Autocmds
+-- Is recreation of any of these Git vimscript functions is worth recreating
 
 
 -- silent exec "Git push origin " . lua vim.cmd[[ fugitive#head()]]

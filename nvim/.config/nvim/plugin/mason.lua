@@ -1,6 +1,6 @@
 
 
--- FIX:  Json Issue:
+-- FIX:  Mason: Json LSP Now Working
 -- adding jsonls to the list creates an install error
 
 require("mason").setup {

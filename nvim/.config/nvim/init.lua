@@ -13,35 +13,37 @@ require('plugin_maps')
 require('silent_maps')
 require('autocmd')
 
--- TODO:  Migrate current plugin structure to module map
 
--- TODO: Set different indention level for differend file types
+-- FEATURE: File Indentation: Set different level
 
--- TODO: Fix up format
+-- TODO:  Structure: Migrate current plugin structure to module map
+
+-- TODO: Structure: Fix up format
 -- Add good headings
+
 
 -- TODO: Create Archived
 -- New info location for sunsetted configs and pluggin info
 
 
--- RESEARCH: Are autocmd faster than vim.cmd[[]]
+-- RESEARCH: Old Autocmds: Are autocmd faster than vim.cmd[[]]
 -- Is it worth finding a replacement
 
 -- ----------------------------------------------------------------------------
 
--- FEATURE: This is interesting for resizing panes on close.
+-- FEATURE: Rezise: This is interesting for resizing panes on close.
 -- Looked into it briefly - Looks relevively straight forward
 -- https://github.com/kwkarlwang/bufresize.nvim
 
 
--- TODO: Finish reviewing plugins
-  -- Indent text object - TODO; needs more research (accidentially indented who
-  -- block - not sure if it was this pluging)
+-- TODO: Plugin Review: Finish reviewing plugins
+  -- Indent text object 
+  -- accidentially indented who block - not sure if it was this pluging)
   -- 'michaeljsmith/vim-indent-object';
 
--- TODO: Explore best Snippets manager
+-- FEATURE: Snippet Manager Strategy: Explore best Snippets manager
 
--- TODO:Create base snippits for python and tf
+-- TODO: Plugin Snippes: Create base snippits for python and tf
 -- Snippets manager (SnipMate), dependencies, and snippets repo
 -- 'MarcWeber/vim-addon-mw-utils';
 -- Started causeing issuew with tab from insert mode
@@ -49,7 +51,7 @@ require('autocmd')
 -- 'garbas/vim-snipmate';
 
 
--- TODO: Testing for compatibility with predictions workflow
+-- RESEARCH: Unknown: Testing for compatibility with predictions workflow
 -- Danny disabled
 -- set completeopt-=preview
 -- set completeopt-=menu

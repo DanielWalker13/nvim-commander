@@ -12,7 +12,7 @@
   })
 
 
-  -- RESEARCH: Learn to convert Autocmd from vimscript to lua
+  -- RESEARCH: Scripting: Learn to convert Autocmd from vimscript to lua
   -- Conversion Example
 
   -- augroup highlight_cmds

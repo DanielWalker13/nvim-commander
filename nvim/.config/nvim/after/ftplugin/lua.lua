@@ -1,6 +1,6 @@
 
 -- ----------------------------------------------------------------------------
--- Line formatting options 
+-- Line formatting options
 -- ----------------------------------------------------------------------------
 
     -- letter  meaning when present in 'formatoptions'
@@ -22,7 +22,7 @@
     vim.opt.formatoptions:remove("r")
 
 
-  -- This may need to be modified for other file types 
-  -- TODO: Find universal soluiton 
+  -- This may need to be modified for other file types
+  -- TODO: Find universal soluiton
   -- Autocmd version of this fix
   -- autocmd FileType * set formatoptions-=cro

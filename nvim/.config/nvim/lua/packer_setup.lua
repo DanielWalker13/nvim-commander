@@ -292,8 +292,8 @@ return require('packer').startup({function(use)
 -- ----------------------------------------------------------------------------
 -- Python
 -- ----------------------------------------------------------------------------
-
-  use 'davidhalter/jedi-vim';                  -- Python
+  -- ACTIVE: Plugin Python LSP: Test 'upgrade' to mason lsp over jedi
+  -- use 'davidhalter/jedi-vim';                  -- Python
   -- TODO: Isort: Ensure configured properly
   use    'fisadev/vim-isort';                  -- Python - Automatically sort imports
   use 'psf/black'

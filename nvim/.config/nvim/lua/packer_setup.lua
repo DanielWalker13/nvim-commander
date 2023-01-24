@@ -164,7 +164,10 @@ return require('packer').startup({function(use)
 -- Colorscheme
 -- ----------------------------------------------------------------------------
   -- TODO: Integrate fave color scheme in to new color plugin
+  -- Potential contribution to the the themer repo
+  -- Also contribute to updating the main page with appropriate theme list
   use    'fisadev/fisa-vim-colorscheme';             -- Terminal Vim with 256 colors colorscheme
+
 
   use({
       "themercorp/themer.lua",

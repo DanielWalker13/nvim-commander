@@ -163,9 +163,60 @@ return require('packer').startup({function(use)
 -- ----------------------------------------------------------------------------
 -- Colorscheme
 -- ----------------------------------------------------------------------------
-
-  -- RESEARCH: Plugin ColorSchemes: Best ways to manage and swap color schemes
+  -- TODO: Integrate fave color scheme in to new color plugin
   use    'fisadev/fisa-vim-colorscheme';             -- Terminal Vim with 256 colors colorscheme
+
+  use({
+      "themercorp/themer.lua",
+      config = function()
+      require("themer").setup({
+          -- Light:
+          -- colorscheme = "ayu",
+          -- colorscheme = "rose_pine_dawn",
+          -- colorscheme = "github_light",
+          -- colorscheme = "github_light",
+
+          -- Dark:
+          -- colorscheme = "amora",  -- Good for not blue tones
+          -- colorscheme = "astron", -- Really Good
+          -- colorscheme = "ayu_dark",   -- Even Better
+          -- colorscheme = "ayu_mirage",
+          -- colorscheme = "boo",-- Pretty good - too flat
+          -- colorscheme = "catppuccin",
+          -- colorscheme = "darknight", -- Good for not blue tones
+          -- colorscheme = "doom_one",
+          -- colorscheme = "dracula",
+          -- colorscheme = "everforest",
+          -- colorscheme = "kurai",   -- good
+          -- colorscheme = "nord",
+          -- colorscheme = "onedark", -- good
+          -- colorscheme = "papa_dark",
+          -- colorscheme = 'rose_pine',
+          -- colorscheme = "rose_pine_moon",
+          -- colorscheme = "github_dark", -- Good too grey
+          colorscheme = "github_dark_colorblind", -- Contender
+          -- colorscheme = "gruvbox-material-dark-hard",
+          -- colorscheme = "gruvbox-material-dark-medium", -- Better and gv hard
+          -- colorscheme = "gruvbox",
+
+          -- colorscheme = "radium",
+          -- colorscheme = "uwu",
+
+
+
+
+          styles = {
+              ["function"] = { style = 'italic' },
+              functionbuiltin = { style = 'italic' },
+	             	variable = { style = 'italic' },
+	              	variableBuiltIn = { style = 'italic' },
+	            	parameter  = { style = 'italic' },
+	          },
+            enable_installer = false,
+	      }
+        )
+        end
+    })
 
   -- 'tristen/superman'
   -- 'fcpg/vim-farout';

@@ -39,6 +39,16 @@
   vim.opt.filetype = 'json'
   vim.opt.expandtab = true
 
+  -- BUG: only whichkey menu renders well
+  -- vim.cmd[[
+  --   autocmd ColorScheme * highlight Pmenu ctermbg=234 guibg=#060a0f
+  -- ]]
+
+-- telescope.
+-- require('telescope.builtin').builtin.colorscheme()
+-- lua require('telescope.builtin').telescope.buffer.buffer()
+-- telescope.builtin.buffers()
+
 -- TODO: Dealing with Folds
   -- Enable for certain file types only?
   -- set foldmethod=syntax

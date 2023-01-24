@@ -163,9 +163,11 @@ return require('packer').startup({function(use)
 -- ----------------------------------------------------------------------------
 -- Colorscheme
 -- ----------------------------------------------------------------------------
-  -- TODO: Integrate fave color scheme in to new color plugin
+  -- TODO: Colorscheme: Integrate fave color scheme in to new color plugin
   -- Potential contribution to the the themer repo
   -- Also contribute to updating the main page with appropriate theme list
+  -- TODO: Colorscheme:  Make all popup windows colors a few tones lighter
+
   use    'fisadev/fisa-vim-colorscheme';             -- Terminal Vim with 256 colors colorscheme
 
 

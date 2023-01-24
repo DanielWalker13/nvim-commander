@@ -1,6 +1,6 @@
 
   -- highlight ExtraWhitespace ctermbg = ''
-
+  -- BUG: Same is line is still showing highlighting
   -- TODO: Make this null if it's set
   -- vim.g.better_whitespace_operator =
 

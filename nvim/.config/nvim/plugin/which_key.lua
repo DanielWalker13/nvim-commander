@@ -36,6 +36,7 @@ local mappings = {
 
     },
     h = {'<cmd>Telescope help_tags<cr>', 'Seach Help'},
+    -- FIX: Leader tk not working
     k = {'<cmd>Telescope keymaps<cr>', 'Seach Key Maps'},
     l = {
         name = "LSP",
@@ -86,7 +87,7 @@ local mappings = {
   g = {
     name = "Git: Fugitive",
 
-    a = {':Gwrite<CR>', 'Git Add' },                           -- tested
+    a = {':Gwrite<CR>', 'Git Add Current File' },                           -- tested
     b = {
         name = 'Git Branch',
         b = {':Git branch<CR>', 'Check Local Branch' }, -- tested

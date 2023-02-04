@@ -175,6 +175,7 @@ return require('packer').startup({function(use)
       "themercorp/themer.lua",
       config = function()
       require("themer").setup({
+          transparent = true,
           -- Light:
           -- colorscheme = "ayu",
           -- colorscheme = "rose_pine_dawn",
@@ -199,7 +200,8 @@ return require('packer').startup({function(use)
           -- colorscheme = 'rose_pine',
           -- colorscheme = "rose_pine_moon",
           -- colorscheme = "github_dark", -- Good too grey
-          colorscheme = "github_dark_colorblind", -- Contender
+          -- colorscheme = "github_dark_colorblind", -- Contender
+          colorscheme = "fissy", -- My custom theme
           -- colorscheme = "gruvbox-material-dark-hard",
           -- colorscheme = "gruvbox-material-dark-medium", -- Better and gv hard
           -- colorscheme = "gruvbox",

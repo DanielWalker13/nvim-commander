@@ -76,11 +76,12 @@
       -- },
       extensions = {
         -- Your extension configuration goes here:
-    -- extensions_list = { "themes", "terms" },
-        extension_name = {
-          extension_config_key = 'harpoon',
-        }
-        -- please take a look at the readme of the extension you want to configure
+        extensions_list = { "harpoon", "packer" },
+        -- extension_name = {
+        --   extension_config_key = 'harpoon',
+        --   extension_config_key = 'Packer',
+        -- }
+        -- -- please take a look at the readme of the extension you want to configure
       }
     }
 
